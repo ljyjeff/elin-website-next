@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/elin-website-next",
-  output: "export", 
-  reactStrictMode: true,
-};
+const nextConfig = {};
 
 export default nextConfig;

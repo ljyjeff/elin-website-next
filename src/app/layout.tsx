@@ -5,8 +5,6 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Space_Mono } from 'next/font/google';
 import theme from '../theme';
 
-import AppBar from '@mui/material/AppBar';
-
 const spaceMono = Space_Mono({
   weight: ['400', '700'],
   subsets: ['latin'],
