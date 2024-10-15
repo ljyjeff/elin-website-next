@@ -1,42 +1,42 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+:root {
+  --navbar-height: 2.5rem;
+  --logo-height: 8.5rem;
+  --first-color: hsl(341, 50%, 42%); /* #a13657 */
+  --button-color: hsl(341, 43%, 64%); /* #cb7c95 */
+  --title-color: hsl(341, 43%, 64%);
+  --text-color: hsl(341, 43%, 64%);
+  /* --body-color:  hsl(349, 28%, 92%); */
+  --body-color: hsl(0, 0%, 100%);
+  --highlight-color: hsl(344, 16%, 86%); /* #e1d6d9 */
+  --body-font-font-family: "Space Mono";
+  --body-font-font-style: normal;
+  --h2-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
+  --font-weight-normal: 400;
+  --font-weight-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+body {
+ background-color: var(--body-color);
+ color: var(--text-color);
+ font-family: var(--body-font-font-family);
+ font-style: var(--body-font-font-style);
+}
+
+ul {
+ list-style: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+ text-decoration: none;
 }
