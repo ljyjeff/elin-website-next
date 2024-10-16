@@ -3,9 +3,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Space_Mono } from 'next/font/google';
-import Image from 'next/image'
 import theme from '@/theme';
-import headerBanner from '@/assets/header-home.png';
+import Container from "@mui/material/Container";
+import Banner from "@/components/Banner";
+import NavigationBar from "@/components/navbar/NavigationBar";
 
 
 const spaceMono = Space_Mono({
@@ -34,12 +35,11 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <CssBaseline />
           <ThemeProvider theme={theme}>
-            <Image
-              src={headerBanner}
-              height={135}
-              alt="Banner image"
-            />
-            {children}
+            <Container maxWidth='lg'>
+              <Banner/>
+              <NavigationBar/>
+              {children}
+            </Container>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

@@ -4,20 +4,31 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      dark: '#A13657',
+      dark: '#85465A',
       main: '#CB7C95',
-      light: '#E1D6D9'
+      light: '#F4E7EC'
     }
   },
   typography: {
     fontFamily: 'var(--font-space-mono)',
-    h5: {
+    h6: {
       color: '#CB7C95',
       fontWeight: 700
     },
     body1 : {
       color: '#CB7C95'
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: () => ({
+          '&:hover': {
+            backgroundColor: '#F4E7EC',
+          },
+        }),
+      },
+    },
   },
 });
 
