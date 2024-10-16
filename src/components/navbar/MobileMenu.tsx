@@ -1,6 +1,5 @@
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import { displayMobile, displayBlockMobile } from './constants';
 
 interface MobileMenuProps {
@@ -42,15 +41,6 @@ export default function MobileMenu({ pages, anchorElNav, handleCloseNavMenu, han
           </MenuItem>
         ))}
       </Menu>
-    </Box>
-    <Box sx={{ flexGrow: 0, display: displayMobile }}>
-      <Button
-        color='primary'
-        size='large'
-        onClick={handleCloseNavMenu}
-      >
-        <InstagramIcon />
-      </Button>
     </Box>
   </>);
 }

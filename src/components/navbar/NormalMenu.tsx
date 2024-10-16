@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from "@mui/material";
-import InstagramIcon from '@mui/icons-material/Instagram';
 import { displayNormal } from './constants';
 
 interface NormalMenuProps {
@@ -22,13 +21,6 @@ export default function NormalMenu({ pages, handleCloseMobileMenu }: NormalMenuP
           <Typography variant="h5" sx={{ textAlign: 'center' }}>{page}</Typography>
         </Button>
       ))}
-      <Button
-        color='primary'
-        size='large'
-        sx={{ mx: '1rem' }}
-      >
-        <InstagramIcon />
-      </Button>
     </Box>
   );
 }
