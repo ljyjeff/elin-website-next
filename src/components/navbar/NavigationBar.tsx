@@ -1,8 +1,9 @@
 "use client";
-import { Toolbar } from '@mui/material';
+import { AppBar, Toolbar } from '@mui/material';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 import NormalMenu from './NormalMenu';
+import Banner from "@/components/Banner";
 
 const pages = ["Illustration", "Children's Book", "Game"];
 
@@ -19,17 +20,20 @@ export default function NavigationBar() {
   };
 
   return (
-    <Toolbar disableGutters>
-      <MobileMenu
-        pages={pages}
-        anchorElNav={anchorMobNav}
-        handleOpenNavMenu={handleOpenNavMenu}
-        handleCloseNavMenu={handleCloseNavMenu} />
+    <AppBar color="transparent" position='static' elevation={3}>
+      <Banner />
+      <Toolbar disableGutters sx={{ marginBottom: '1rem' }}>
+        <MobileMenu
+          pages={pages}
+          anchorElNav={anchorMobNav}
+          handleOpenNavMenu={handleOpenNavMenu}
+          handleCloseNavMenu={handleCloseNavMenu} />
 
-      <NormalMenu
-        pages={pages}
-        handleCloseMobileMenu={handleCloseNavMenu} />
-    </Toolbar>
+        <NormalMenu
+          pages={pages}
+          handleCloseMobileMenu={handleCloseNavMenu} />
+      </Toolbar>
+    </AppBar>
   )
 }
 

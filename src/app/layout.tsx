@@ -5,7 +5,6 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Space_Mono } from 'next/font/google';
 import theme from '@/theme';
 import Container from "@mui/material/Container";
-import Banner from "@/components/Banner";
 import NavigationBar from "@/components/navbar/NavigationBar";
 
 
@@ -35,9 +34,8 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <CssBaseline />
           <ThemeProvider theme={theme}>
+            <NavigationBar />
             <Container maxWidth='lg'>
-              <Banner/>
-              <NavigationBar/>
               {children}
             </Container>
           </ThemeProvider>

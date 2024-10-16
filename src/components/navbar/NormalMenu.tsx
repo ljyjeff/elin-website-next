@@ -8,23 +8,27 @@ interface NormalMenuProps {
 }
 
 export default function NormalMenu({ pages, handleCloseMobileMenu }: NormalMenuProps) {
-  return (<Box sx={{ justifyContent: "center", flexGrow: 1, display: displayNormal }}>
-    {pages.map((page) => (
+  return (
+    <Box sx={{ justifyContent: "center", flexGrow: 1, display: displayNormal }}>
+      {pages.map((page) => (
+        <Button
+          key={page}
+          onClick={handleCloseMobileMenu}
+          color='primary'
+          variant="outlined"
+          size='large'
+          sx={{ display: 'block', mx: '1rem', borderRadius: 50 }}
+        >
+          <Typography variant="h5" sx={{ textAlign: 'center' }}>{page}</Typography>
+        </Button>
+      ))}
       <Button
-        key={page}
-        onClick={handleCloseMobileMenu}
         color='primary'
         size='large'
-        sx={{ display: 'block' }}
+        sx={{ mx: '1rem' }}
       >
-        <Typography variant="h5" sx={{ textAlign: 'center' }}>{page}</Typography>
+        <InstagramIcon />
       </Button>
-    ))}
-    <Button
-      color='primary'
-      size='large'
-    >
-      <InstagramIcon />
-    </Button>
-  </Box>);
+    </Box>
+  );
 }
