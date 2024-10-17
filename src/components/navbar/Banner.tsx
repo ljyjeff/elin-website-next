@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <Box sx={{
       my: '1rem',
-      height: {xs: 80, sm: 135},
+      height: { xs: 80, sm: 135 },
       position: 'relative'
     }}>
       <Image
@@ -15,7 +15,7 @@ export default function Banner() {
         alt="Banner image"
         fill={true}
         priority={true}
-        style={{objectFit:"contain"}}
+        style={{ objectFit: "contain" }}
       />
     </Box>
   );
