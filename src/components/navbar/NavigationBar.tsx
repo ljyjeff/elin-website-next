@@ -3,7 +3,7 @@ import { AppBar, Box, Container, Toolbar } from '@mui/material';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 import NormalMenu from './NormalMenu';
-import Banner from "@/components/Banner";
+import Banner from "./Banner";
 import { PageConfig } from './pageConfig';
 import { LinkedinButton, InstagramButton } from './IconButtons';
 import { displayBlockNormal } from './constants';

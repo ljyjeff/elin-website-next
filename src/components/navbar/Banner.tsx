@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import headerBanner from '@/assets/header-home.png';
+import headerBanner from './assets/header-home.png';
 import Image from 'next/image'
 
 export default function Banner() {
