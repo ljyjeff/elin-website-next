@@ -7,6 +7,7 @@ import Banner from "@/components/Banner";
 import { PageConfig } from './pageConfig';
 import { LinkedinButton, InstagramButton } from './IconButtons';
 import { displayBlockNormal } from './constants';
+import { usePathname } from 'next/navigation'
 
 const pages: PageConfig[] = [
   { name: "Illustration", link: '/illustration' },
@@ -15,6 +16,8 @@ const pages: PageConfig[] = [
 ];
 
 export default function NavigationBar() {
+  const pathname = usePathname();
+
   const [anchorMobNav, setAnchorMobNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -44,6 +47,7 @@ export default function NavigationBar() {
           handleCloseNavMenu={handleCloseNavMenu} />
 
         <NormalMenu
+          currentPath={pathname}
           pages={pages}
           handleCloseMobileMenu={handleCloseNavMenu} />
       </Toolbar>

@@ -31,10 +31,14 @@ let theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: () => ({
-          backgroundColor: '#fcf7f9',
+          backgroundColor: '#FCF7F9',
           '&:hover': {
             backgroundColor: '#F4E7EC',
           },
+          "&.Mui-disabled": {
+            background: '#af526a',
+            color: '#e7c2d0'
+          }
         }),
       },
     },

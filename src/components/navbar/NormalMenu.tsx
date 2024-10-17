@@ -3,11 +3,12 @@ import { displayNormal } from './constants';
 import { PageConfig } from './pageConfig';
 
 interface NormalMenuProps {
+  currentPath: string,
   pages: PageConfig[],
   handleCloseMobileMenu: () => void
 }
 
-export default function NormalMenu({ pages, handleCloseMobileMenu }: NormalMenuProps) {
+export default function NormalMenu({ currentPath, pages, handleCloseMobileMenu }: NormalMenuProps) {
   return (
     <Box sx={{ justifyContent: "center", flexGrow: 1, display: displayNormal }}>
       {pages.map((page) => (
@@ -17,6 +18,7 @@ export default function NormalMenu({ pages, handleCloseMobileMenu }: NormalMenuP
           onClick={handleCloseMobileMenu}
           color='primary'
           variant="outlined"
+          disabled={page.link === currentPath}
           size='large'
           sx={{ display: 'block', mx: '1rem', borderRadius: 50 }}
         >
