@@ -13,8 +13,8 @@ export default function Banner() {
       <Image
         src={headerBanner}
         alt="Banner image"
-        fill={true}
-        priority={true}
+        fill
+        priority
         style={{ objectFit: "contain" }}
       />
     </Box>
