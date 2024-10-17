@@ -43,7 +43,7 @@ export default function Illustration() {
               src={item.img}
               title={item.title}
               alt={item.title}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
             />
           </ImageListItem>
         ))}
