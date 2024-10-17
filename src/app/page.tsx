@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography';
 export default function Home() {
   return (
     <Box>
-      <Typography variant="h6">About</Typography>
-      <Typography variant='body1'>GRWM</Typography>
+      <Typography variant="h6">Home</Typography>
+      <Typography variant='body1'>some text CAPITALIZED</Typography>
     </Box>
   );
 }

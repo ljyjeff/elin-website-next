@@ -1,9 +1,11 @@
-import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
+import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { displayMobile, displayBlockMobile } from './constants';
+import { PageConfig } from './pageConfig';
+import { LinkedinButton, InstagramButton } from './IconButtons';
 
 interface MobileMenuProps {
-  pages: string[],
+  pages: PageConfig[],
   anchorElNav: HTMLElement | null,
   handleOpenNavMenu: (_: React.MouseEvent<HTMLElement>) => void,
   handleCloseNavMenu: () => void
@@ -12,13 +14,12 @@ interface MobileMenuProps {
 export default function MobileMenu({ pages, anchorElNav, handleCloseNavMenu, handleOpenNavMenu }: MobileMenuProps) {
   return (<>
     <Box sx={{ flexGrow: 1, display: displayMobile }}>
-      <Button
-        size="large"
+      <IconButton
         onClick={handleOpenNavMenu}
         color="primary"
       >
-        <MenuIcon />
-      </Button>
+        <MenuIcon sx={{ fontSize: 34 }} />
+      </IconButton>
       <Menu
         id="menu-appbar"
         anchorEl={anchorElNav}
@@ -36,11 +37,15 @@ export default function MobileMenu({ pages, anchorElNav, handleCloseNavMenu, han
         sx={{ display: displayBlockMobile }}
       >
         {pages.map((page) => (
-          <MenuItem key={page} onClick={handleCloseNavMenu}>
-            <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+          <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+            <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
           </MenuItem>
         ))}
       </Menu>
+    </Box>
+    <Box sx={{ flexGrow: 0, display: displayMobile }}>
+      <LinkedinButton handleCloseNavMenu={handleCloseNavMenu} />
+      <InstagramButton handleCloseNavMenu={handleCloseNavMenu} />
     </Box>
   </>);
 }

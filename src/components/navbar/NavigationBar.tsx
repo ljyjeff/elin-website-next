@@ -1,13 +1,18 @@
 "use client";
-import { AppBar, Box, Container, IconButton, Toolbar } from '@mui/material';
+import { AppBar, Box, Container, Toolbar } from '@mui/material';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 import NormalMenu from './NormalMenu';
 import Banner from "@/components/Banner";
-import {Instagram, LinkedIn} from '@mui/icons-material';
+import { PageConfig } from './pageConfig';
+import { LinkedinButton, InstagramButton } from './IconButtons';
+import { displayBlockNormal } from './constants';
 
-const pages = ["Illustration", "Children's Book", "Game"];
-
+const pages: PageConfig[] = [
+  { name: "Illustration", link: '/illustration' },
+  { name: "Children's Book", link: '/childrensbook' },
+  { name: "Game", link: '/game' }
+];
 
 export default function NavigationBar() {
   const [anchorMobNav, setAnchorMobNav] = useState<null | HTMLElement>(null);
@@ -21,29 +26,17 @@ export default function NavigationBar() {
   };
 
   return (
-    <AppBar color="transparent" position='static' elevation={3} sx={{paddingTop: '0.5rem'}}>
-      <Container maxWidth='xl' sx={{ position: 'absolute', top: '1rem'}}>
+    <AppBar color="transparent" position='static' elevation={3} sx={{ paddingTop: '0.5rem' }}>
+      <Banner />
+
+      <Container maxWidth='xl' sx={{ position: 'absolute', top: '1rem', display: displayBlockNormal }}>
         <Box sx={{ float: 'right' }}>
-          <IconButton
-            color='primary'
-            size='large'
-            sx={{ px: 1}}
-            onClick={handleCloseNavMenu}
-          >
-            <LinkedIn fontSize='large' />
-          </IconButton>
-          <IconButton
-            color='primary'
-            size='large'
-            sx={{ px: 1}}
-            onClick={handleCloseNavMenu}
-          >
-            <Instagram fontSize='large' />
-          </IconButton>
+          <LinkedinButton handleCloseNavMenu={handleCloseNavMenu} />
+          <InstagramButton handleCloseNavMenu={handleCloseNavMenu} />
         </Box>
       </Container>
-      <Banner />
-      <Toolbar disableGutters sx={{ marginBottom: '1rem' }}>
+
+      <Toolbar disableGutters sx={{ marginBottom: { xs: 0, md: '1rem' }, px: { xs: '0.5rem', md: 0 } }}>
         <MobileMenu
           pages={pages}
           anchorElNav={anchorMobNav}
