@@ -8,7 +8,11 @@ interface NormalMenuProps {
   handleCloseMobileMenu: () => void
 }
 
-export default function NormalMenu({ currentPath, pages, handleCloseMobileMenu }: NormalMenuProps) {
+export default function NormalMenu({
+  currentPath,
+  pages,
+  handleCloseMobileMenu
+}: NormalMenuProps) {
   return (
     <Box sx={{ justifyContent: "center", flexGrow: 1, display: displayNormal }}>
       {pages.map((page) => (

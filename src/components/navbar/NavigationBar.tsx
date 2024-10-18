@@ -41,6 +41,7 @@ export default function NavigationBar() {
 
       <Toolbar disableGutters sx={{ marginBottom: { xs: 0, md: '1rem' }, px: { xs: '0.5rem', md: 0 } }}>
         <MobileMenu
+          currentPath={pathname}
           pages={pages}
           anchorElNav={anchorMobNav}
           handleOpenNavMenu={handleOpenNavMenu}

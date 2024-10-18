@@ -1,20 +1,13 @@
-'use client';
+"use client"
 import { createTheme } from '@mui/material/styles';
-import React, { forwardRef } from 'react';
-import NextLink, { LinkProps } from "next/link";
-
-const LinkBehaviour = forwardRef<HTMLAnchorElement, LinkProps>(
-  function LinkBehaviour(props, ref) {
-    return <NextLink ref={ref} {...props} />;
-  }
-);
+import { LinkBehaviour } from './components/types';
 
 let theme = createTheme({
   palette: {
     primary: {
       dark: '#85465A',
       main: '#CB7C95',
-      light: '#F4E7EC'
+      light: '#F4E7EC',
     }
   },
   typography: {
@@ -61,6 +54,15 @@ let theme = createTheme({
       defaultProps: {
         LinkComponent: LinkBehaviour
       }
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: () => ({
+          "&.Mui-selected": {
+            background: '#F4E7EC',
+          }
+        }),
+      },
     }
   },
 });
