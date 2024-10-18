@@ -47,14 +47,14 @@ let theme = createTheme({
       },
     },
     MuiLink: {
-        defaultProps: {
-            component: LinkBehaviour
-        }
+      defaultProps: {
+        component: LinkBehaviour
+      }
     },
     MuiButtonBase: {
-        defaultProps: {
-            LinkComponent: LinkBehaviour
-        }
+      defaultProps: {
+        LinkComponent: LinkBehaviour
+      }
     }
   },
 });
