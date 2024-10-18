@@ -1,6 +1,4 @@
-"use client"
 import { Box, CardMedia, Container, Stack, Typography } from "@mui/material";
-
 
 export default function Grwm() {
   return (

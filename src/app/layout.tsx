@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Space_Mono } from 'next/font/google';
 import theme from '@/theme';
-import Container from "@mui/material/Container";
 import NavigationBar from "@/components/navbar/NavigationBar";
+import { Card, Container, CssBaseline } from "@mui/material";
 
 
 const spaceMono = Space_Mono({
@@ -34,10 +33,15 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <CssBaseline />
           <ThemeProvider theme={theme}>
+
             <NavigationBar />
+
             <Container maxWidth='lg'>
               {children}
             </Container>
+
+            <Card sx={{height: 100}}>{/* footer */}</Card>
+
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
