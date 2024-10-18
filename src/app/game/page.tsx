@@ -1,4 +1,4 @@
-import { Box, CardMedia, Container, Stack, Typography } from "@mui/material";
+import { Box, Button, CardMedia, Stack, Typography } from "@mui/material";
 
 export default function Grwm() {
   return (
@@ -6,7 +6,7 @@ export default function Grwm() {
       <Stack spacing={3}>
         <Typography variant='h4'>GRWM: Walking My Cat</Typography>
 
-        <Container>
+        <Box>
           <CardMedia
             sx={{
               border: 0,
@@ -17,10 +17,19 @@ export default function Grwm() {
             src="https://www.youtube.com/embed/ebGY07W2s2k?si=pVryGmjy0U266Tk6&vq=hd1080"
             allowFullScreen={true}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" />
-        </Container>
+
+          <Button
+            variant='outlined'
+            target="_blank"
+            size='large'
+            component="a"
+            href="https://elinrator.itch.io/get-ready-with-me-walking-my-cat">
+            Try the game out yourself!
+          </Button>
+        </Box>
 
         <Box>
-          <Typography variant='h6' sx={{ textDecoration: 'underline' }}>Instructions</Typography>
+          <Typography variant='h6' sx={{ textDecoration: 'italic' }}>Instructions</Typography>
           <Stack spacing={1}>
             <Typography variant='body1'>{"- Left click slowly to walk, quickly to run"}</Typography>
             <Typography variant='body1'>{"- Don't let the cat get too far away or your smol hands will drop the leash"}</Typography>
