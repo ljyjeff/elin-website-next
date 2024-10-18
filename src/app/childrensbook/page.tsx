@@ -9,7 +9,7 @@ export default function ChildrensBook() {
     <Box sx={{ marginTop: '1.5rem' }}>
       <Stack spacing={3}>
 
-        <Typography variant='h4' sx={{ textDecoration: 'underline' }}>The True Angel</Typography>
+        <Typography variant='h4'>The True Angel</Typography>
 
         <Box>
           <Typography variant='h6'>Character Model Sheet:</Typography>

@@ -4,7 +4,7 @@ export default function Grwm() {
   return (
     <Box sx={{ marginTop: '1.5rem' }}>
       <Stack spacing={3}>
-        <Typography variant='h4' sx={{ textDecoration: 'underline' }}>GRWM: Walking My Cat</Typography>
+        <Typography variant='h4'>GRWM: Walking My Cat</Typography>
 
         <Box>
           <CardMedia
