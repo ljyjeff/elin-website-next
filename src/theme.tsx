@@ -44,8 +44,10 @@ let theme = createTheme({
             backgroundColor: '#F4E7EC',
           },
           "&.Mui-disabled": {
-            background: '#af526a',
-            color: '#e7c2d0'
+            background: '#AF526A',
+            h5: {
+              color: '#F4E7EC'
+            }
           }
         }),
       },
