@@ -8,7 +8,9 @@ export default function ChildrensBook() {
   return (
     <Box sx={{ marginTop: '1.5rem' }}>
 
-      <Typography variant='h5' sx={{ textDecoration: 'underline' }}>Character Model Sheet:</Typography>
+      <Typography variant='h4' sx={{ textDecoration: 'underline' }}>The True Angel</Typography>
+
+      <Typography variant='h6'>Character Model Sheet:</Typography>
       <ImageList cols={1} gap={1}>
         {angelDesign.map((item: ImageConfig, i) => (
           <ImageListItem key={i} sx={{
@@ -28,7 +30,7 @@ export default function ChildrensBook() {
         ))}
       </ImageList>
 
-      <Typography variant='h5' sx={{ textDecoration: 'underline' }}>Cover:</Typography>
+      <Typography variant='h6'>Cover:</Typography>
       <ImageList cols={1}>
         {angelHeader.map((item: ImageConfig, i) => (
           <ImageListItem key={i} sx={{
@@ -48,7 +50,7 @@ export default function ChildrensBook() {
         ))}
       </ImageList>
 
-      <Typography variant='h5' sx={{ textDecoration: 'underline' }}>Story:</Typography>
+      <Typography variant='h6'>Story:</Typography>
       <ImageList cols={2} gap={1}>
         {angel.map((item: ImageConfig, i) => (
           <ImageListItem key={i} sx={{

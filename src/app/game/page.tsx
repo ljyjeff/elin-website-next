@@ -4,7 +4,7 @@ export default function Grwm() {
   return (
     <Box sx={{ marginTop: '1.5rem' }}>
       <Stack spacing={3}>
-        <Typography variant='h4'>GRWM: Walking My Cat</Typography>
+        <Typography variant='h4' sx={{ textDecoration: 'underline' }}>GRWM: Walking My Cat</Typography>
 
         <Box>
           <CardMedia
@@ -29,7 +29,7 @@ export default function Grwm() {
         </Box>
 
         <Box>
-          <Typography variant='h6'>Instructions</Typography>
+          <Typography variant='h6'>Instructions:</Typography>
           <Stack spacing={1}>
             <Typography variant='body1'>{"- Left click slowly to walk, quickly to run"}</Typography>
             <Typography variant='body1'>{"- Don't let the cat get too far away or your smol hands will drop the leash"}</Typography>
@@ -38,7 +38,7 @@ export default function Grwm() {
         </Box>
 
         <Box>
-          <Typography variant='h6' sx={{ textDecoration: 'underline' }}>About</Typography>
+          <Typography variant='h6'>About:</Typography>
           <Stack spacing={2}>
             <Typography variant='body1'>{
               'GRWM: Walking My Cat is a 2D scrolling game with a theme on helping a little girl walk her cat. During the game, you will see some obstacles which will attract cat’s attention. What you should do is follow the cat’s speed by left clicking the mouse, make sure to not run past the cat, and not let the cat get too far away.'
