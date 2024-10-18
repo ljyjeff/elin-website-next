@@ -19,6 +19,10 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: 'var(--font-space-mono)',
+    h4: {
+      color: '#CB7C95',
+      fontWeight: 700
+    },
     h6: {
       color: '#CB7C95',
       fontWeight: 700

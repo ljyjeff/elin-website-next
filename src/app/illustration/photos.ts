@@ -17,7 +17,7 @@ export interface Photo {
   height: number;
 }
 
-export const photos : Photo[] = [
+export const photos: Photo[] = [
   { src: sheeleepy, title: "Sheeleepy", width: 4050, height: 6000 },
   { src: springRain, title: "Spring Rain", width: 2800, height: 4000 },
   { src: listenToSummer, title: "Listening to Summer", width: 1800, height: 1800 },
