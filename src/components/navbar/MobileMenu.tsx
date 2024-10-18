@@ -2,7 +2,7 @@ import { Box, Drawer, IconButton, List, ListItem, ListItemButton, Typography } f
 import MenuIcon from '@mui/icons-material/Menu';
 import { displayMobile, displayBlockMobile } from './constants';
 import { PageConfig } from './pageConfig';
-import { LinkedinButton, InstagramButton } from './IconButtons';
+import { LinkedinButton, InstagramButton, ArrowBackButton } from './IconButtons';
 
 interface MobileMenuProps {
   currentPath: string,
@@ -34,6 +34,9 @@ export default function MobileMenu({
         sx={{ display: displayBlockMobile }}
       >
         <Box sx={{ width: 250 }} role="presentation" onClick={handleCloseNavMenu}>
+          <Box sx={{ float: 'right', my: 1, paddingRight: 1 }}>
+            <ArrowBackButton />
+          </Box>
           <List>
             {pages.map((page) => (
               <ListItem
@@ -44,7 +47,7 @@ export default function MobileMenu({
                   href={page.link}
                   selected={page.link === currentPath}
                 >
-                  <Typography>{page.name}</Typography>
+                  <Typography variant='h6'>{page.name}</Typography>
                 </ListItemButton>
               </ListItem>
             ))}
