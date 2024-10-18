@@ -14,6 +14,7 @@ export default function Banner() {
         src={headerBanner}
         alt="Banner image"
         fill
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 75vw, 40vw"
         priority
         style={{ objectFit: "contain" }}
       />

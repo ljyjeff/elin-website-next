@@ -23,6 +23,10 @@ let theme = createTheme({
       color: '#CB7C95',
       fontWeight: 700
     },
+    h5: {
+      color: '#CB7C95',
+      fontWeight: 700
+    },
     h6: {
       color: '#CB7C95',
       fontWeight: 700

@@ -1,7 +1,8 @@
 import { Box, ImageListItem } from '@mui/material';
 import Image from 'next/image';
 import { Masonry } from '@mui/lab';
-import { photos, Photo } from './photos';
+import { illustrations } from './images';
+import { ImageConfig } from '@/components/types';
 
 export default function Illustration() {
   return (
@@ -10,7 +11,7 @@ export default function Illustration() {
       marginLeft: { xs: 1, sm: 1, md: 2 } // added to offset Masonry spacing
     }}>
       <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={{ xs: 1, sm: 1, md: 2 }}>
-        {photos.map((item: Photo, i) => (
+        {illustrations.map((item: ImageConfig, i) => (
           <ImageListItem key={i} sx={{
             width: "100%",
             position: "relative",

@@ -29,7 +29,7 @@ export default function Grwm() {
         </Box>
 
         <Box>
-          <Typography variant='h6' sx={{ textDecoration: 'italic' }}>Instructions</Typography>
+          <Typography variant='h6'>Instructions</Typography>
           <Stack spacing={1}>
             <Typography variant='body1'>{"- Left click slowly to walk, quickly to run"}</Typography>
             <Typography variant='body1'>{"- Don't let the cat get too far away or your smol hands will drop the leash"}</Typography>

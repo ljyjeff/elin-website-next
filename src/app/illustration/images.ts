@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+import { ImageConfig } from '@/components/types';
 import sheeleepy from './assets/sheeleepy.jpg';
 import springRain from './assets/spring_rain.jpg';
 import listenToSummer from './assets/listen_to_summer.jpg';
@@ -10,14 +10,7 @@ import greenwardCatnata from './assets/greenward_catnata.jpg';
 import selfPortrait from './assets/self_portrait.jpg';
 import soundOfAutumn from './assets/sound_of_autumn.jpg';
 
-export interface Photo {
-  src: StaticImageData;
-  title: string;
-  width: number;
-  height: number;
-}
-
-export const photos: Photo[] = [
+export const illustrations: ImageConfig[] = [
   { src: sheeleepy, title: "Sheeleepy", width: 4050, height: 6000 },
   { src: springRain, title: "Spring Rain", width: 2800, height: 4000 },
   { src: listenToSummer, title: "Listening to Summer", width: 1800, height: 1800 },
