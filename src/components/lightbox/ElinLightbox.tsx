@@ -1,5 +1,5 @@
 
-import Lightbox, { SlideImage} from "yet-another-react-lightbox";
+import Lightbox, { SlideImage } from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
@@ -14,12 +14,16 @@ interface ElinLightboxProps {
   onClose: () => void,
 }
 
-export default function ElinLightbox({ photos, index, onClose } : ElinLightboxProps) {
+export default function ElinLightbox({ photos, index, onClose }: ElinLightboxProps) {
 
   return <Lightbox
     className={styles.lightbox}
-    carousel={{ padding: "55px" }}
-    thumbnails={{ vignette: true }}
+    carousel={{ padding: "35px", preload: 2 }}
+    thumbnails={{
+      vignette: true,
+      height: 50,
+      width: 88,
+    }}
     slides={photos}
     open={index >= 0}
     index={index}

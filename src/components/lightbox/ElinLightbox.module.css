@@ -9,11 +9,12 @@
   --yarl__thumbnails_thumbnail_active_border_color: var(--dark);
   --yarl__color_button: var(--main);
   --yarl__color_button_active: var(--dark);
-  --yarl__icon_size: 3rem;
+  --yarl__icon_size: 2.5rem;
+  --yarl__navigation_button_padding: 5px;
+  --yarl__button_padding: 2px;
 }
 
 .lightbox :global(.yarl__thumbnails_thumbnail_active) {
   border-width: 1.5px;
   background-color: var(--selected-light);
 }
-
