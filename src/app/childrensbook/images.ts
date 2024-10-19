@@ -17,6 +17,7 @@ import angel15 from "./assets/angel_15.jpg";
 import angel16 from "./assets/angel_16.jpg";
 import angel17 from "./assets/angel_17.jpg";
 import angelDesign1 from "./assets/angel_design_1.jpg";
+import angelDesign2 from "./assets/angel_design_2.jpg";
 
 export const angelHeader = [
   { src: angel1, title: "The True Angel 1", width: 4500, height: 2250 },
@@ -24,6 +25,7 @@ export const angelHeader = [
 
 export const angelDesign = [
   { src: angelDesign1, title: "The True Angel Character Design 1", width: 9350, height: 3000 },
+  { src: angelDesign2, title: "The True Angel Character Design 2", width: 9352, height: 3000 },
 ]
 
 export const angel = [
