@@ -1,0 +1,19 @@
+.lightbox {
+  --dark: #85465A;
+  --main: #CB7C95;
+  --light: #FCF7F9;
+  --selected-light: #F4E7EC;
+  --yarl__color_backdrop: var(--light);
+  --yarl__thumbnails_thumbnail_background: var(--light);
+  --yarl__thumbnails_thumbnail_border_color: var(--main);
+  --yarl__thumbnails_thumbnail_active_border_color: var(--dark);
+  --yarl__color_button: var(--main);
+  --yarl__color_button_active: var(--dark);
+  --yarl__icon_size: 3rem;
+}
+
+.lightbox :global(.yarl__thumbnails_thumbnail_active) {
+  border-width: 1.5px;
+  background-color: var(--selected-light);
+}
+
