@@ -18,6 +18,7 @@ import angel16 from "./assets/angel_16.jpg";
 import angel17 from "./assets/angel_17.jpg";
 import angelDesign1 from "./assets/angel_design_1.jpg";
 import angelDesign2 from "./assets/angel_design_2.jpg";
+import { AggregatedSlideImage, toAggregatedSlideImages } from "@/components/types";
 
 export const angelHeader = [
   { src: angel1, title: "The True Angel 1", width: 4500, height: 2250 },
@@ -46,3 +47,15 @@ export const angel = [
   { src: angel16, title: "The True Angel 16", width: 4500, height: 2250 },
   { src: angel17, title: "The True Angel 17", width: 4500, height: 2250 },
 ];
+
+export const childrensBookSlidesIndex: AggregatedSlideImage[][] = toAggregatedSlideImages(
+  [
+    angelDesign,
+    angelHeader,
+    angel
+  ]);
+
+export const childrensBookSlides: AggregatedSlideImage[] =
+  childrensBookSlidesIndex
+    .flatMap(v => v)
+    .sort((a, b) => a.index - b.index);
