@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation'
 const pages: PageConfig[] = [
   { name: "Illustration", link: '/illustration' },
   { name: "Children's Book", link: '/childrensbook' },
+  { name: "Background", link: '/background' },
   { name: "Game", link: '/game' }
 ];
 
