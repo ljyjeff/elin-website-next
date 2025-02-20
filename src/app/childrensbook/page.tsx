@@ -2,7 +2,7 @@
 import { Box, ImageList, ImageListItem, Stack, Typography } from "@mui/material";
 import { ImageConfig } from '@/components/types';
 import Image from 'next/image';
-import { angel, angelDesign, angelHeader, childrensBookSlides, childrensBookSlidesIndex } from './images';
+import { angel, angelHeader, childrensBookSlides, childrensBookSlidesIndex } from './images';
 import ElinLightbox from "@/components/lightbox/ElinLightbox";
 import { useState } from "react";
 
@@ -18,32 +18,6 @@ export default function ChildrensBook() {
           <Typography variant='h4'>The True Angel</Typography>
 
           <Box>
-            <Typography variant='h6'>Character Model Sheet:</Typography>
-            <ImageList cols={1} gap={1}>
-              {angelDesign.map((item: ImageConfig, i) => (
-                <ImageListItem
-                  key={i}
-                  sx={{
-                    width: "100%",
-                    position: "relative",
-                    aspectRatio: `${item.width} / ${item.height}`,
-                  }}
-                  onClick={() => setIndex(childrensBookSlidesIndex[0][i].index)}
-                >
-                  <Image
-                    fill
-                    priority
-                    src={item.src}
-                    title={item.title}
-                    alt={item.title}
-                    sizes="100vw"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-          </Box>
-
-          <Box>
             <Typography variant='h6'>Cover:</Typography>
             <ImageList cols={1}>
               {angelHeader.map((item: ImageConfig, i) => (
@@ -54,7 +28,7 @@ export default function ChildrensBook() {
                     position: "relative",
                     aspectRatio: `${item.width} / ${item.height}`,
                   }}
-                  onClick={() => setIndex(childrensBookSlidesIndex[1][i].index)}
+                  onClick={() => setIndex(childrensBookSlidesIndex[0][i].index)}
                 >
                   <Image
                     fill
@@ -80,7 +54,7 @@ export default function ChildrensBook() {
                     position: "relative",
                     aspectRatio: `${item.width} / ${item.height}`,
                   }}
-                  onClick={() => setIndex(childrensBookSlidesIndex[2][i].index)}
+                  onClick={() => setIndex(childrensBookSlidesIndex[1][i].index)}
                 >
                   <Image
                     fill

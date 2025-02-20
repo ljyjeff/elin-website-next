@@ -10,6 +10,7 @@ import { displayBlockNormal } from './constants';
 import { usePathname } from 'next/navigation'
 
 const pages: PageConfig[] = [
+  { name: "Character Design", link: '/characterdesign' },
   { name: "Illustration", link: '/illustration' },
   { name: "Children's Book", link: '/childrensbook' },
   { name: "Background", link: '/background' },
