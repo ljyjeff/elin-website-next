@@ -44,33 +44,6 @@ export default function CharacterDesign() {
             </ImageList>
           </Box>
 
-          {/* Cloud Burster */}
-          <Box>
-            <Typography variant='h6'>Cloud Burster:</Typography>
-            <ImageList cols={1} gap={1}>
-              {cloudBurster.map((item: ImageConfig, i) => (
-                <ImageListItem
-                  key={i}
-                  sx={{
-                    width: "100%",
-                    position: "relative",
-                    aspectRatio: `${item.width} / ${item.height}`,
-                  }}
-                  onClick={() => setIndex(slidesIndex[3][i].index)}
-                >
-                  <Image
-                    fill
-                    priority
-                    src={item.src}
-                    title={item.title}
-                    alt={item.title}
-                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-          </Box>
-
 
           {/* Aim Shoot Woof */}
           <Box>
@@ -107,6 +80,33 @@ export default function CharacterDesign() {
                     aspectRatio: `${item.width} / ${item.height}`,
                   }}
                   onClick={() => setIndex(slidesIndex[2][i].index)}
+                >
+                  <Image
+                    fill
+                    priority
+                    src={item.src}
+                    title={item.title}
+                    alt={item.title}
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </Box>
+
+          {/* Cloud Burster */}
+          <Box>
+            <Typography variant='h6'>Cloud Burster:</Typography>
+            <ImageList cols={1} gap={1}>
+              {cloudBurster.map((item: ImageConfig, i) => (
+                <ImageListItem
+                  key={i}
+                  sx={{
+                    width: "100%",
+                    position: "relative",
+                    aspectRatio: `${item.width} / ${item.height}`,
+                  }}
+                  onClick={() => setIndex(slidesIndex[3][i].index)}
                 >
                   <Image
                     fill
